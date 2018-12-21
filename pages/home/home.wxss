@@ -25,12 +25,6 @@
 	width: 96rpx;
 }
 
-.swiper,
-.banner .slide-image {
-	width: 100%;
-	height: 600rpx;
-}
-
 .title:before {
 	padding-right: 10rpx;
 	content: "";
