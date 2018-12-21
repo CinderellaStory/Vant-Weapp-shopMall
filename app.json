@@ -1,0 +1,16 @@
+{
+	"pages": [
+		"pages/home/home",
+		"pages/logs/logs"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#990000",
+		"navigationBarTitleText": "任性商城",
+		"navigationBarTextStyle": "#fff"
+	},
+	"usingComponents": {
+		"van-button": "/pages/vant/button/index",
+		"van-search": "/pages/vant/search/index"
+	}
+}

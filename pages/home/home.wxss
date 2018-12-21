@@ -1,0 +1,118 @@
+/**home.wxss**/
+.bg {
+	background: #f7f7f7;
+}
+
+.van-search {
+	background: #990000 !important;
+}
+
+.banner image {
+	height: 1000rpx;
+	width: 100%;
+}
+
+.indicator-color {
+	color: #fff;
+}
+
+.indicator-active-color {
+	color: #990000;
+}
+
+.classifyImg {
+	height: 96rpx;
+	width: 96rpx;
+}
+
+.swiper,
+.banner .slide-image {
+	width: 100%;
+	height: 600rpx;
+}
+
+.title:before {
+	padding-right: 10rpx;
+	content: "";
+	border-left: 20rpx solid #e46600;
+}
+
+.title {
+	color: #e46600;
+	font-size: 36rpx;
+}
+
+.group {
+	background: #fff;
+}
+
+.group view {
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+	margin-top: 40rpx;
+}
+
+.group view text {
+	display: block;
+	color: #666;
+	font-size: 28rpx;
+}
+
+.goods {
+	margin-top: 20rpx;
+	background: #fff;
+}
+
+.classifyTitle {
+	padding: 20rpx;
+	display: flex;
+	justify-content: space-between;
+}
+
+.more {
+	color: #999;
+	display: inline-block;
+	font-size: 26rpx;
+}
+
+.goodsList {
+	width: 100%;
+}
+
+.goodsList .list {
+	text-align: center;
+	margin: 0 0 20rpx 20rpx;
+	width: 46%;    box-shadow: 0 2px 8px 0 rgba(7, 17, 27, 0.06);
+	display: inline-block;
+}
+
+.goodsList image {
+	display: block;
+	width: 100%;
+}
+
+.goodsDeatil {
+	padding: 10rpx 20rpx;
+	text-align: left;
+}
+
+.name {
+	height: 34rpx;
+	color: #333;
+	font-size: 26rpx;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.price {
+	color: #990000;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 26rpx;
+}
+
+.goodsList image {
+	width: 100%;
+	height: 340rpx;
+}

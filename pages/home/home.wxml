@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="home bg">
+	<view class="search">
+		<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+	</view>
+	<view class="banner">
+		<swiper  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<block wx:for="{{imgUrls}}">
+				<swiper-item>
+					<image src="{{item}}" class="slide-image"/>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view class="group">
+		<view wx:for="{{classify}}">
+			<image src="{{item.imgs}}" class="classifyImg"></image>
+			<text>{{item.text}}</text>
+		</view>
+	</view>
+	<view class="goods" wx:for="{{lists}}">
+		<view class="classifyTitle">
+			<text class="title">{{item.title}}</text>
+			<text class="more">{{more}}》</text>
+		</view>
+		<view class="goodsList">
+			<view class="list" wx:for="{{item.tj}}" wx:for-item="tj" wx:key="tj">
+				<image src="{{tj.pic}}"></image>
+				<view class="goodsDeatil">
+					<text class="name">{{tj.name}}</text>
+					<text class="price">￥{{tj.price}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
