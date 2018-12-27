@@ -4,25 +4,32 @@
 }
 
 .van-search {
-	background: #990000 !important;
+	background: #444fff !important;
 }
 
 .banner image {
-	height: 1000rpx;
-	width: 100%;
+	height: 500rpx;
+  width: 100%;
 }
-
+swiper{
+  height: 500rpx;
+}
 .indicator-color {
 	color: #fff;
 }
 
 .indicator-active-color {
-	color: #990000;
+	color: #444fff;
 }
 
 .classifyImg {
 	height: 96rpx;
 	width: 96rpx;
+}
+
+.swiper,
+.banner .slide-image {
+	height: 500rpx;
 }
 
 .title:before {
@@ -38,6 +45,7 @@
 
 .group {
 	background: #fff;
+  padding-bottom: 40rpx;
 }
 
 .group view {

@@ -1,0 +1,50 @@
+<view class="cart">
+  <view>
+      <view class="cartGoods" wx:for="{{items}}" wx:key="item" data-index="{{index}}">
+      <view class="sigleCheck">
+      <!-- wx:if 是否选择显示不同图标 -->
+          <icon wx:if="{{item.selected}}" type="success" color="red" bindtap="sigleCheck" data-index="{{index}}" />
+          <icon wx:else type="circle" bindtap="sigleCheck" data-index="{{index}}"/>
+      </view>
+      <view class="goodsImg">
+        <navigator url="../details/details?id={{item.id}}">
+              <image src="{{item.pic}}" />
+        </navigator>
+      </view>
+      <view class="goodsDetail">
+        <view class='details'>
+        <view class='goodsName'>
+        <navigator url="../details/details?id={{item.id}}">
+          {{item.info}}</navigator>
+        </view>
+          <text class='goodsPrice'>￥{{item.sale_price}}</text>
+        </view>
+        <view class="operate">
+            <van-stepper value="{{item.number}}" data-index="{{index}}" min="1" max="10" bind:plus="plus" bind:minus="minus"/>
+            <view class="del">
+              <van-icon name="close" bindtap="deleteList" data-index="{{index}}"/>
+            </view>
+        </view>
+      </view> 
+    </view>
+    <view class="submitBar" wx:if="{{bottomBar}}">
+        <van-submit-bar
+        price="{{ totalPrice*100 }}"
+        button-text="结算"
+        bind:submit="onClickButton"
+        >
+          <!-- wx:if 是否全选显示不同图标 -->
+          <view class='allCheck'>
+            <icon wx:if="{{selectAllStatus}}" type="success_circle" color="red" bindtap="selectAll"/>
+            <icon wx:else type="circle" color="#666" bindtap="selectAll"/>
+            <text class="allText">全选</text>
+          </view>
+        </van-submit-bar>
+    </view>
+  </view>
+  <view wx:if="{{hasList}}" class='empty'>
+  购物车为空，快去添加商品吧~
+  </view>
+  <van-notify id="custom-selector" />
+  <van-toast id="van-toast" />
+</view>

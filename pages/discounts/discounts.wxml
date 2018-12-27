@@ -1,0 +1,8 @@
+<view>
+  <van-badge-group :active="active" bind:change="onChange">
+    <van-badge title="新品推荐"/>
+    <van-badge title="服饰箱包"/>
+    <van-badge title="优品鞋类"/>
+    <van-badge title="特产美食"/>
+  </van-badge-group>
+</view>

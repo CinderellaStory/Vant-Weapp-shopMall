@@ -1,0 +1,36 @@
+.goodsDetail{
+  padding: 20rpx 30rpx;
+}
+swiper{
+  height: 800rpx;
+}
+image{
+  height: 800rpx;
+  width: 100%;
+}
+.goodsName{
+  font-size: 34rpx;
+  display: flex;
+  line-height: 52rpx;
+  margin-top: 20rpx;
+  color: #333;
+  justify-content: space-around;
+  align-items: center;
+}
+.share{
+  font-size: 40rpx;
+}
+.name{
+  width: 88%
+}
+.price{
+  color: red;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.sale_price{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  color: rgb(207, 207, 207);
+  text-decoration:line-through;
+}

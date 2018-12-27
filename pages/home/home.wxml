@@ -1,27 +1,43 @@
-<!--index.wxml-->
+<!--home.wxml-->
 <view class="home bg">
 	<view class="search">
 		<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
 	</view>
+	<view class="banner">
+		<swiper indicator-dots autoplay="autoplay" interval="3000" duration="800" circular>
+			<block wx:for="{{bannerList}}">
+				<swiper-item>
+					<image src="{{item}}" class="slide-image" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
 	<view class="group">
-		<view wx:for="{{classify}}">
+		<view wx:for="{{classifyList}}" wx:key="classify">
 			<image src="{{item.imgs}}" class="classifyImg"></image>
 			<text>{{item.text}}</text>
 		</view>
 	</view>
-	<view class="goods" wx:for="{{lists}}">
-		<view class="classifyTitle">
-			<text class="title">{{item.title}}</text>
-			<text class="more">{{more}}》</text>
-		</view>
-		<view class="goodsList">
-			<view class="list" wx:for="{{item.tj}}" wx:for-item="tj" wx:key="tj">
-				<image src="{{tj.pic}}"></image>
-				<view class="goodsDeatil">
-					<text class="name">{{tj.name}}</text>
-					<text class="price">￥{{tj.price}}</text>
-				</view>
-			</view>
-		</view>
-	</view>
+	<view class="goods-warpper">
+    <view class="goods" wx:for="{{groupList}}" wx:key="lists">
+      <view class="classifyTitle">
+        <text class="title">{{item.title}}</text>
+        <text class="more">{{more}}》</text>
+      </view>
+      <view class="goodsList">
+        <view class="list" wx:for="{{item.tj}}" wx:for-item="tj" wx:key="tj">
+          <navigator url="../details/details?id={{tj.id}}">
+           <image src="{{tj.pic}}"></image>
+          </navigator>
+          <view class="goodsDeatil">
+            <navigator url="../details/details?id={{tj.id}}">
+              <text class="name">{{tj.name}}</text>
+            </navigator>
+            <text class="price">￥{{tj.price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+	<!-- <include src="./../../components/tabbar/tabbar.wxml"/> -->
 </view>

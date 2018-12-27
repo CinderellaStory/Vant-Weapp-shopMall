@@ -1,0 +1,43 @@
+<view>
+		<view class="banner">
+		<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular>
+			<block wx:for="{{imgUrls}}">
+				<swiper-item>
+					<image src="{{item}}" class="slide-image" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+  <view class='goodsDetail'>
+  <view>
+    <text class="price">{{price}}</text>
+    <text class="sale_price">{{sale_price}}</text>
+  </view>
+  <view class='goodsName'>
+    <view class='name'>
+        <text>韩都衣舍2018冬装新款韩版宽松外搭开衫毛衣外套针织衫女YK9564鲲</text>
+    </view>
+    <view class="share">
+        <van-icon name="share" />
+    </view>
+  </view>
+  </view>
+  <van-goods-action>
+    <van-goods-action-icon
+      icon="star-o"
+      text="收藏"
+      bind:click="onClickCollect"
+    />
+    <van-goods-action-icon icon="cart-o" text="购物车" info="5" bind:click="onClickCart"/>
+    <van-goods-action-button
+      text="加入购物车"
+      type="warning"
+      bind:click="addCart"
+    />
+    <van-goods-action-button
+      text="立即购买"
+      bind:click="onClickBuy"
+    />
+</van-goods-action>
+<van-toast id="van-toast" />
+</view>
