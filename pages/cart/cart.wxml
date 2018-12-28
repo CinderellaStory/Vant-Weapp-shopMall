@@ -1,9 +1,15 @@
 <view class="cart">
+  <view class='top' wx:if="{{isTop}}">
+     <view><van-icon name="wap-nav" class='wap-nav'/><text>批量删除</text></view>
+    <view>
+     <van-icon name="delete" class='delete' bindtap="emptyCart"/><text bindtap="emptyCart">清空购物车</text>
+    </view>
+  </view>
   <view>
       <view class="cartGoods" wx:for="{{items}}" wx:key="item" data-index="{{index}}">
       <view class="sigleCheck">
       <!-- wx:if 是否选择显示不同图标 -->
-          <icon wx:if="{{item.selected}}" type="success" color="red" bindtap="sigleCheck" data-index="{{index}}" />
+          <icon wx:if="{{item.selected}}" type="success" color="#6167e9" bindtap="sigleCheck" data-index="{{index}}" />
           <icon wx:else type="circle" bindtap="sigleCheck" data-index="{{index}}"/>
       </view>
       <view class="goodsImg">
@@ -35,15 +41,21 @@
         >
           <!-- wx:if 是否全选显示不同图标 -->
           <view class='allCheck'>
-            <icon wx:if="{{selectAllStatus}}" type="success_circle" color="red" bindtap="selectAll"/>
-            <icon wx:else type="circle" color="#666" bindtap="selectAll"/>
+            <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#6167e9" bindtap="selectAll"/>
+            <icon wx:else type="circle" color="#6167e9" bindtap="selectAll"/>
             <text class="allText">全选</text>
           </view>
         </van-submit-bar>
     </view>
   </view>
   <view wx:if="{{hasList}}" class='empty'>
-  购物车为空，快去添加商品吧~
+   <view>
+       <image src='../../images/a.png' class='empty_pic'></image>
+       <view class="empty_text">购物车为空，快去添加商品吧~</view>
+       <view>
+       <van-button round type="danger" bindtap='Gohome' class='Gohome' size="large">去逛逛</van-button>
+       </view>
+   </view>
   </view>
   <van-notify id="custom-selector" />
   <van-toast id="van-toast" />

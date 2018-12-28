@@ -1,8 +1,20 @@
-<view>
-  <van-badge-group :active="active" bind:change="onChange">
-    <van-badge title="新品推荐"/>
-    <van-badge title="服饰箱包"/>
-    <van-badge title="优品鞋类"/>
-    <van-badge title="特产美食"/>
-  </van-badge-group>
+<view class='classify'>
+  <view class="badge-group">
+      <van-badge-group :active="active" bind:change="onChange">
+        <van-badge title="新品推荐"/>
+        <van-badge title="服饰箱包"/>
+        <van-badge title="优品鞋类"/>
+        <van-badge title="特产美食"/>
+      </van-badge-group>
+  </view>
+  <view class='goods'>
+    <view wx:for="{{detail}}" class='goodsList'>
+      <view>
+        <image src="{{item.pic}}" class='pic'></image>
+      </view>
+     <view class='title'>
+         <text>{{item.text}}</text>
+     </view>
+    </view>
+  </view>
 </view>

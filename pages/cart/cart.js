@@ -8,6 +8,7 @@ const app = getApp()
 
 Page({
   data: {
+    isTop: true,
     bottomBar:true,           //默认底部导航
     hasList: false,          // 列表是否有数据
     selectAllStatus: false,    // 全选状态，默认全选
@@ -103,7 +104,8 @@ Page({
       });
       this.setData({
         hasList: true,              // 修改标识为false，显示购物车为空页面
-        bottomBar: false          //底部导航隐藏
+        bottomBar: false,          //底部导航隐藏
+        isTop: false,
       });
     } else {                              // 如果不为空
       this.getTotalPrice();           // 重新计算总价格
@@ -115,8 +117,25 @@ Page({
       });
     }
   },
+  // 清空购物车
+  emptyCart(){
+    console.log("清空",this.data.items)
+    var items = this.data.items;
+   items = '';
+    this.setData({
+      items: items,
+      bottomBar: false,
+      hasList: true,
+      isTop: false,
+    });
+  },
   // 购买成功
   onClickButton() {
     Toast.success('购买成功');
   },
+  Gohome(){
+    wx.switchTab({
+      url: '../home/home'
+    })
+  }
 })

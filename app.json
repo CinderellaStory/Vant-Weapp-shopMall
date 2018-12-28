@@ -1,23 +1,24 @@
 {
     "pages": [
-        "pages/discounts/discounts",
         "pages/cart/cart",
+        "pages/discounts/discounts",
+        "pages/mine/mine",
         "pages/home/home",
         "pages/details/details",
-        "pages/mine/mine",
         "pages/logs/logs"
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#444fff",
+        "navigationBarBackgroundColor": "#6167e9",
         "navigationBarTitleText": "任性商城",
         "navigationBarTextStyle": "#fff"
     },
     "tabBar": {
       "color": "#464a56",
-      "selectedColor": "#6595e9",
+      "selectedColor": "#6167e9",
       "backgroundColor": "#FFFFFF",
       "borderStyle": "#333",
+      "fontWeight":"bold",
       "list": [
         {
           "pagePath": "pages/home/home",
@@ -39,6 +40,8 @@
     },
     "usingComponents": {
       "van-badge": "/pages/vant/badge/index",
+      "van-row": "/pages/vant/row/index",
+      "van-col": "/pages/vant/col/index",
       "van-badge-group": "/pages/vant/badge-group/index",
         "van-tree-select": "/pages/vant/tree-select/index",
         "van-action-sheet": "/pages/vant/action-sheet/index",
@@ -48,7 +51,7 @@
         "van-button": "/pages/vant/button/index",
         "van-search": "/pages/vant/search/index",
         "van-tabbar": "/pages/vant/tabbar/index",
-        "van-tabbar-item": "/pages/vant/tabbar-item/index",                                "van-submit-bar": "/pages/vant/submit-bar/index",
+        "van-tabbar-item": "/pages/vant/tabbar-item/index",                                       "van-submit-bar": "/pages/vant/submit-bar/index",
         "van-swipe-cell":"/pages/vant/swipe-cell/index",
         "van-icon": "/pages/vant/icon/index",
         "van-goods-action": "/pages/vant/goods-action/index",

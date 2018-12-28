@@ -4,7 +4,10 @@
   flex-direction: column;
   align-items: center;
 }
-
+.user{
+  background: #6167e9;
+  padding: 100rpx 0;
+}
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
@@ -13,7 +16,7 @@
 }
 
 .userinfo-nickname {
-  color: #aaa;
+  color: #fff;
 }
 
 .usermotto {
@@ -22,4 +25,12 @@
 }
 .sure_btn button{
 	width: 500rpx;
+}
+
+.sure_btn .van-button--danger{
+  height: 90rpx;
+  background: #6167e9;
+  border: 1px solid #6167e9;
+  line-height: 90rpx;
+  font-size: 32rpx;
 }

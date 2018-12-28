@@ -4,7 +4,7 @@
 }
 
 .van-search {
-	background: #444fff !important;
+	background: #6167e9 !important;
 }
 
 .banner image {
@@ -19,7 +19,7 @@ swiper{
 }
 
 .indicator-active-color {
-	color: #444fff;
+	color: #6167e9;
 }
 
 .classifyImg {

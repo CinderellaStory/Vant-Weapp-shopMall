@@ -1,14 +1,28 @@
 .cart{
   background: #f7f7f7;
 }
-.compute{
+.top{
+  color: #666;
+  background: #fff;
+  padding: 20rpx 20rpx;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.top .wap-nav{
+  vertical-align: middle;
+  padding-right:16rpx;
+}
+.delete{
+  padding-right:16rpx;
+  margin-left: 20rpx; 
+}
+.compute,.cartGoods{
   display: flex;
   align-items: center;
 }
 .cartGoods{
-  display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .cartGoods{
   background: #fff;
@@ -58,8 +72,29 @@
 }
 .empty{
   background: #fff;
-  text-align: center;
-  margin-top: 500rpx;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #666;
-  font-size: 30rpx;
+  font-size: 32rpx;
+}
+.empty_text{
+  padding: 10rpx 0 30rpx 0;
+  text-align: center;
+}
+.empty_pic{
+ width:400rpx;
+height:250rpx;
+}
+.Gohome .van-button--large{
+  height: 80rpx;
+  background: #6167e9;
+  border: 1px solid #6167e9;
+  line-height: 74rpx;
+  font-size: 36rpx;
+}
+.submitBar .van-button--danger{
+  border: 1px solid #6167e9;
+  background: #6167e9;
 }
